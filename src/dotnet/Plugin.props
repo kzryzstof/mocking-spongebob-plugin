@@ -1,0 +1,18 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <SdkVersion>2021.2.0</SdkVersion>
+
+    <Title>Mocking Spongebob</Title>
+    <Description>Description</Description>
+
+    <Authors></Authors>
+    <Copyright></Copyright>
+    <PackageTags>resharper plugin comment mock spongebob</PackageTags>
+
+    <PackageProjectUrl></PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageIconUrl></PackageIconUrl>
+  </PropertyGroup>
+
+</Project>
