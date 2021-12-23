@@ -5,6 +5,7 @@
     <RootNamespace>NoSuchCompany.ReSharper.MockingSpongebob</RootNamespace>
     <LangVersion>default</LangVersion>
     <Nullable>enable</Nullable>
+    <PackageId>nosuchcompany.mocking-spongebob</PackageId>
   </PropertyGroup>
 
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
@@ -19,7 +20,7 @@
   <ItemGroup>
     <PackageReference Include="JetBrains.ReSharper.SDK" Version="$(SdkVersion)" PrivateAssets="all" />
     <!-- TODO: https://github.com/NuGet/Home/issues/7154 -->
-    <PackageReference Include="Wave" Version="[$(WaveVersion),$(UpperWaveVersion))" />
+    <PackageReference Include="Wave" Version="$(WaveVersion)" />
   </ItemGroup>
 
 
