@@ -1,5 +1,5 @@
-$PluginId = "ReSharperPlugin.MockingSpongebob"
-$SolutionPath = "$PSScriptRoot\ReSharperPlugin.MockingSpongebob.sln"
+$PluginId = "NoSuchCompany.MockingSpongebobPlugin"
+$SolutionPath = "$PSScriptRoot\NoSuchCompany.MockingSpongebobPlugin.sln"
 $SourceBasePath = "$PSScriptRoot\src\dotnet"
 
 $VsWhereOutput = [xml] (& "$PSScriptRoot\tools\vswhere.exe" -format xml -products *)

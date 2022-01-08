@@ -3,23 +3,40 @@
   <PropertyGroup>
     <LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
     <LangVersion>default</LangVersion>
+    <PackageId>ca.nosuchcompany.mockingspongebobplugin</PackageId>
+    <PackageVersion>1.0.1</PackageVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <Nullable>enable</Nullable>
+    <RootNamespace>NoSuchCompany.ReSharper.MockingSpongebobPlugin</RootNamespace>
+    <AssemblyName>NoSuchCompany.MockingSpongebobPlugin</AssemblyName>
   </PropertyGroup>
 
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <AssemblyName>MockingSpongebob</AssemblyName>
-    <RootNamespace>NoSuchCompany.ReSharper.MockingSpongebob</RootNamespace>
-    <IsPackable>false</IsPackable>
-    <DefineConstants>$(DefineConstants);RIDER</DefineConstants>
+    <TargetFramework>net472</TargetFramework>
+    <IsPackable>True</IsPackable>
+    <DefineConstants>$(DefineConstants);RESHARPER</DefineConstants>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Rider.SDK" Version="$(SdkVersion)" />
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="$(SdkVersion)" PrivateAssets="all" />
+    <!-- TODO: https://github.com/NuGet/Home/issues/7154 -->
+    <PackageReference Include="Wave" Version="$(WaveVersion)" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).dll" PackagePath="dotFiles" Pack="true" />
+    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).pdb" PackagePath="dotFiles" Pack="true" />
+
+    <!-- TODO: add additional assemblies -->
+  </ItemGroup>
+
+  <!-- WARNING: ReSharper plugins with icons must be compiled using PowerShell scripts -->
   <!-- TODO: uncomment for xaml icons -->
   <!--<ItemGroup>-->
     <!--<Reference Include="System.Xaml" />-->
