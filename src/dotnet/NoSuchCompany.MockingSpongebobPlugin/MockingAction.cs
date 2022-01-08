@@ -6,6 +6,7 @@ using JetBrains.ReSharper.Psi.CSharp;
 using JetBrains.ReSharper.Psi.CSharp.Tree;
 using JetBrains.ReSharper.Psi.ExtensionsAPI.Tree;
 using JetBrains.ReSharper.Psi.Tree;
+using JetBrains.ReSharper.Resources.Shell;
 using JetBrains.TextControl;
 using JetBrains.Util;
 using NoSuchCompany.ReSharper.MockingSpongebobPlugin.Text;
@@ -32,7 +33,7 @@ namespace NoSuchCompany.ReSharper.MockingSpongebobPlugin
 
         #region Properties
 
-        public override string Text => "Mock it!";
+        public override string Text => "Use sarcasm";
 
         #endregion
 
@@ -62,13 +63,16 @@ namespace NoSuchCompany.ReSharper.MockingSpongebobPlugin
         {
             var commentNode = (ICommentNode)_selectedComment;
 
-            string sarcasticSpongeBobComment = _selectedComment.CommentText.AsSpongeBob();
+            var sarcasticSpongeBobComment = _selectedComment.CommentText.AsSpongeBob();
 
             var factory = CSharpElementFactory.GetInstance(_selectedComment.GetPsiModule());
             
             ICSharpCommentNode newComment = factory.CreateComment("//" + sarcasticSpongeBobComment);
 
-            ModificationUtil.ReplaceChild(commentNode, newComment);
+            using (WriteLockCookie.Create(commentNode.Parent!.IsPhysical()))
+            {
+                ModificationUtil.ReplaceChild(commentNode, newComment);
+            }
 
             return null;
         }
