@@ -12,7 +12,7 @@
 
     <PackageProjectUrl>https://github.com/kzryzstof/mocking-spongebob-plugin</PackageProjectUrl>
     <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.en.html</PackageLicenseUrl>
-    <PackageIconUrl>https://github.com/kzryzstof/mocking-spongebob-plugin/blob/13f7cc84d1cef333633cd5fa9de7dbfae4430427/public/icon.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/kzryzstof/mocking-spongebob-plugin/13f7cc84d1cef333633cd5fa9de7dbfae4430427/public/icon.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
