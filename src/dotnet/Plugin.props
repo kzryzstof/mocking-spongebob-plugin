@@ -4,7 +4,7 @@
     <SdkVersion>2021.3.0</SdkVersion>
 
     <Title>Mocking Spongebob</Title>
-    <Description>The plugin provides the ability to mock comments as Mocking Spongebob would do</Description>
+    <Description>The plugin provides the ability to make comments a tiny bit more sarcastic as Mocking Spongebob would do.</Description>
 
     <Authors>NoSuch Company</Authors>
     <Copyright></Copyright>
@@ -12,7 +12,7 @@
 
     <PackageProjectUrl>https://github.com/kzryzstof/mocking-spongebob-plugin</PackageProjectUrl>
     <PackageLicenseUrl>https://www.gnu.org/licenses/lgpl-3.0.en.html</PackageLicenseUrl>
-    <PackageIconUrl></PackageIconUrl>
+    <PackageIconUrl>https://github.com/kzryzstof/mocking-spongebob-plugin/blob/13f7cc84d1cef333633cd5fa9de7dbfae4430427/public/icon.png</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
