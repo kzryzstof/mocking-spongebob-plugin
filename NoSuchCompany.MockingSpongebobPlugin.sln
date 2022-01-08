@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{4A9ABB95-3762-448B-B5BF-099E46DB22DE}"
+ProjectSection(SolutionItems) = preProject
+	src\dotnet\Plugin.props = src\dotnet\Plugin.props
+	README.md = README.md
+	CHANGELOG.md = CHANGELOG.md
+	src\rider\main\resources\META-INF\plugin.xml = src\rider\main\resources\META-INF\plugin.xml
+	gradle.properties = gradle.properties
+EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSuchCompany.MockingSpongebobPlugin", "src\dotnet\NoSuchCompany.MockingSpongebobPlugin\NoSuchCompany.MockingSpongebobPlugin.csproj", "{4B575E69-11F4-4BB0-BF8F-2681B2AE26B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSuchCompany.MockingSpongebobPlugin.Rider", "src\dotnet\NoSuchCompany.MockingSpongebobPlugin\NoSuchCompany.MockingSpongebobPlugin.Rider.csproj", "{F8A0D03A-5A5B-4B26-B305-56244CC42FF4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B575E69-11F4-4BB0-BF8F-2681B2AE26B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B575E69-11F4-4BB0-BF8F-2681B2AE26B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B575E69-11F4-4BB0-BF8F-2681B2AE26B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B575E69-11F4-4BB0-BF8F-2681B2AE26B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A0D03A-5A5B-4B26-B305-56244CC42FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A0D03A-5A5B-4B26-B305-56244CC42FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A0D03A-5A5B-4B26-B305-56244CC42FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A0D03A-5A5B-4B26-B305-56244CC42FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

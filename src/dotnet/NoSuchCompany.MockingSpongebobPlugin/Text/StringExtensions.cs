@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace ReSharperPlugin.MockingSpongebob.Text
+namespace NoSuchCompany.ReSharper.MockingSpongebobPlugin.Text
 {
     #region Classes
 

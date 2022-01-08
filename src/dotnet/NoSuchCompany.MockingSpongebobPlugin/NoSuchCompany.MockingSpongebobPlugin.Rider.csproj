@@ -2,37 +2,24 @@
 
   <PropertyGroup>
     <LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
-    <RootNamespace>NoSuchCompany.ReSharper.MockingSpongebob</RootNamespace>
-    <LangVersion>default</LangVersion>
+    <LangVersion>latestmajor</LangVersion>
     <Nullable>enable</Nullable>
-    <PackageId>nosuchcompany.mocking-spongebob</PackageId>
-    <AssemblyName>MockingSpongebob</AssemblyName>
   </PropertyGroup>
 
   <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
 
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <IsPackable>True</IsPackable>
-    <DefineConstants>$(DefineConstants);RESHARPER</DefineConstants>
-    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>NoSuchCompany.MockingSpongebobPlugin</AssemblyName>
+    <RootNamespace>NoSuchCompany.ReSharper.MockingSpongebobPlugin</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <DefineConstants>$(DefineConstants);RIDER</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.ReSharper.SDK" Version="$(SdkVersion)" PrivateAssets="all" />
-    <!-- TODO: https://github.com/NuGet/Home/issues/7154 -->
-    <PackageReference Include="Wave" Version="$(WaveVersion)" />
+    <PackageReference Include="JetBrains.Rider.SDK" Version="$(SdkVersion)" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).dll" PackagePath="dotFiles" Pack="true" />
-    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).pdb" PackagePath="dotFiles" Pack="true" />
-
-    <!-- TODO: add additional assemblies -->
-  </ItemGroup>
-
-  <!-- WARNING: ReSharper plugins with icons must be compiled using PowerShell scripts -->
   <!-- TODO: uncomment for xaml icons -->
   <!--<ItemGroup>-->
     <!--<Reference Include="System.Xaml" />-->

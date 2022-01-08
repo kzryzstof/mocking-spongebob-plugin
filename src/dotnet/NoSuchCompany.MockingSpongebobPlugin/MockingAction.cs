@@ -8,9 +8,9 @@ using JetBrains.ReSharper.Psi.ExtensionsAPI.Tree;
 using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.TextControl;
 using JetBrains.Util;
-using ReSharperPlugin.MockingSpongebob.Text;
+using NoSuchCompany.ReSharper.MockingSpongebobPlugin.Text;
 
-namespace ReSharperPlugin.MockingSpongebob
+namespace NoSuchCompany.ReSharper.MockingSpongebobPlugin
 {
     #region Classes
 
