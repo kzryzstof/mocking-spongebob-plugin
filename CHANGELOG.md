@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 23.02.20XX
+- Support for 2023.1
+
 ## 22.09.26XX
 - Support for 2022.3
 
