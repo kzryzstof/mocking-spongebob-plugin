@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 23.09.28XX
+- Support for 2023.3 EAP
+
 ## 23.02.20XX
 - Support for 2023.1
 
