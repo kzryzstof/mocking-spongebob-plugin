@@ -1,7 +1,7 @@
 ﻿<Project>
 
   <PropertyGroup>
-    <SdkVersion>2023.3.0-EAP1</SdkVersion>
+    <SdkVersion>2023.3.0-EAP01</SdkVersion>
 
     <Title>Mocking Spongebob</Title>
     <Description>The plugin provides the ability to make comments a tiny bit more sarcastic as Mocking Spongebob would do.</Description>
