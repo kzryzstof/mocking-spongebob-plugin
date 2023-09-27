@@ -33,6 +33,18 @@ stages:
             inputs:
               version: 6.x
 
+          - task: JavaToolInstaller@0
+            inputs:
+              versionSpec: '17'
+              jdkArchitectureOption: 'x64'
+              jdkSourceOption: 'AzureStorage'
+              azureResourceManagerEndpoint: 'Azure (plugin-rider-pipeline)'
+              azureStorageAccountName: 'stpluginriderpipeline'
+              azureContainerName: 'jdk17'
+              azureCommonVirtualFile: 'jdk17.zip'
+              jdkDestinationDirectory: $(Agent.ToolsDirectory)/jdk
+              cleanDestinationDirectory: true
+
           - task: Bash@3
             displayName: 'update version (gradle & plugin.xml)'
             inputs:
@@ -46,8 +58,9 @@ stages:
               options: '-PPluginVersion=$(Build.BuildNumber)'
               tasks: ':prepareSandbox'
               publishJUnitResults: false
-              jdkVersionOption: 1.17
-          
+              javaHomeOption: 'Path'
+              jdkDirectory: $(Agent.ToolsDirectory)/jdk/JAVA_HOME_17_X64_jdk17_zip
+
           - task: CopyFiles@2
             displayName: 'copy .jar file'
             inputs:
